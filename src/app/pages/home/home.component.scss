@@ -1,0 +1,13 @@
+.home-container {
+  width: 100%;
+}
+
+.home-container__title {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+}
