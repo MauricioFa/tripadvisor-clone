@@ -11,6 +11,6 @@ export class LocationsService {
   
   getLocations(search: string){
     let apiUrl = encodeURI(`/api/search?searchQuery=${search}`)
-    return this.http.get<Location[]>(apiUrl)
+    return this.http.get<any>(apiUrl)
   }
 }

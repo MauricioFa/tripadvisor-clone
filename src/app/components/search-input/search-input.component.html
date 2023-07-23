@@ -1,6 +1,12 @@
-<form class="search-form">
-  <mat-form-field class="search-form__input--center">
+<div class="search-form">
+  <mat-form-field class="search-form__input">
     <mat-label>Places to go, things to do, hotels...</mat-label>
     <input matInput />
   </mat-form-field>
-</form>
+  <div class="search-form__spinner-container" *ngIf="isLoading">
+    <mat-spinner
+      class="search-form__progress-spinner"
+      [diameter]="20"
+    ></mat-spinner>
+  </div>
+</div>

@@ -12,10 +12,10 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
   ],
   imports: [
     BrowserModule,
+    CardComponent,
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderComponent,

@@ -3,6 +3,15 @@
     <h1>Where to</h1>
   </div>
   <div class="home-container__search">
-    <app-search-input></app-search-input>
+    <app-search-input
+      (dataLoaded)="onDataLoaded($any($event))"
+    ></app-search-input>
+  </div>
+  <div class="home-container__results">
+    <app-card
+      *ngFor="let someArray of dataReceived"
+      class="home-container__results--card"
+      [someArray]="someArray"
+    ></app-card>
   </div>
 </div>

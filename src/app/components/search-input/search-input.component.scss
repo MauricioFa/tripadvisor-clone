@@ -1,3 +1,14 @@
-.search-form__input--center {
+.search-form__input {
   width: 100%;
+}
+
+.search-form__spinner-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 0;
+}
+
+.search-form__progress-spinner {
+  top: -6rem;
+  margin-right: 2rem;
 }

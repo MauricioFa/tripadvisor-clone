@@ -1,1 +1,13 @@
-<p>card works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-subtitle>{{ someArray.address_obj.country }}</mat-card-subtitle>
+    <mat-card-title>{{ someArray.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ someArray.address_obj.address_string }}</p>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>MORE</button>
+  </mat-card-actions>
+</mat-card>
