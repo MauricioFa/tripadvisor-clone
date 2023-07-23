@@ -1,0 +1,23 @@
+.title-container {
+  padding: 2rem;
+  font-size: 1.6rem;
+
+  h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+  }
+  &__reviews {
+    display: flex;
+    align-items: flex-start;
+    p :first-child:after {
+      content: "\2022";
+      line-height: 2.2rem;
+      margin: 0 0.5rem;
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+}

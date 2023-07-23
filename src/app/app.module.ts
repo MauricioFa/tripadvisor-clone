@@ -10,14 +10,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LocationComponent } from './pages/location/location.component';
+import { LocationTitleComponent } from './components/location-title/location-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    LocationComponent,
   ],
   imports: [
+    LocationComponent,
+    LocationTitleComponent,
     BrowserModule,
     CardComponent,
     AppRoutingModule,
