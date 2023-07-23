@@ -39,7 +39,7 @@ export class SearchInputComponent {
       this.locationsService.getLocations(this.value)
         .subscribe(locations => {
           this.toggleIsLoading();
-          this.dataLoaded.emit(locations.data);
+          this.dataLoaded.emit(JSON.parse(locations).data);
         })
     }
   }
