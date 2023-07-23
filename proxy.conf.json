@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+        "target": "https://proxy-server-production-afb3.up.railway.app/api",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
