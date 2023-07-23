@@ -10,7 +10,7 @@ export class LocationsService {
   constructor(private http: HttpClient) {}
   
   getLocations(search: string){
-    let apiUrl = encodeURI(`/api/search?searchQuery=${search}`)
+    let apiUrl = encodeURI(`https://proxy-server-production-afb3.up.railway.app/api/search?searchQuery=${search}`)
     return this.http.get(apiUrl, {responseType: 'text'})
   }
 }
