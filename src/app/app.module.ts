@@ -9,11 +9,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { LocationComponent } from './pages/location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
