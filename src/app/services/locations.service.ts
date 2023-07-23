@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Location } from '../models/location.model';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class LocationsService {
   constructor(private http: HttpClient) {}
   
   getLocations(search: string){
-    let apiUrl = encodeURI(`https://proxy-server-production-afb3.up.railway.app/api/search?searchQuery=${search}`)
-    return this.http.get(apiUrl, {responseType: 'text'})
+    let apiUrl = encodeURI(`${environment.API_URL}/api/search?searchQuery=${search}`)
+    console.log({ apiUrl })
+    return this.http.get<any>(apiUrl)
   }
 }
