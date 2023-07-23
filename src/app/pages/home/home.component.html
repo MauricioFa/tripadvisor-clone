@@ -8,6 +8,7 @@
     ></app-search-input>
   </div>
   <div class="home-container__results">
+    <p *ngIf="dataReceived?.length">Showing more relevant results for you</p>
     <app-card
       *ngFor="let someArray of dataReceived"
       class="home-container__results--card"

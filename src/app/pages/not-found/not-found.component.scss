@@ -1,0 +1,18 @@
+.not-found-container {
+  width: 100%;
+  height: calc(100vh - 6.4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__number {
+    font-size: 10rem;
+    font-weight: 500;
+    padding: 3rem 0;
+  }
+
+  &__description {
+    font-size: 2.6rem;
+  }
+}
