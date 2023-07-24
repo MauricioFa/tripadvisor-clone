@@ -10,11 +10,6 @@
   &__reviews {
     display: flex;
     align-items: flex-start;
-    p :first-child:after {
-      content: "\2022";
-      line-height: 2.2rem;
-      margin: 0 0.5rem;
-    }
   }
 
   p {

@@ -3,16 +3,19 @@ import { LocationTitleComponent } from 'src/app/components/location-title/locati
 import { LocationsService } from 'src/app/services/locations.service';
 import { ActivatedRoute } from '@angular/router';
 import { LocationDetails } from 'src/app/models/location-details.model';
+import { CommonModule } from "@angular/common";
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.scss'],
   standalone: true,
-  imports: [LocationTitleComponent],
+  imports: [LocationTitleComponent, CommonModule, MatProgressBarModule],
 })
 export class LocationComponent implements OnInit {
   locationId: string | null = null;
+  isDataLoaded: boolean = false;
   dataReceived: LocationDetails = {
     address_obj: {},
     amenities: [],
@@ -42,6 +45,7 @@ export class LocationComponent implements OnInit {
     this.locationsService.getLocation(locationId)
       .subscribe(data => {
        this.dataReceived = data;
+       this.isDataLoaded = true;
       });
   }
 }

@@ -1,4 +1,9 @@
-<div class="location__container">
+<mat-progress-bar
+  mode="indeterminate"
+  class="progress-bar"
+  *ngIf="isDataLoaded !== true"
+></mat-progress-bar>
+<div class="location__container" *ngIf="isDataLoaded">
   <div class="location__container__title">
     <app-location-title
       name="{{ dataReceived.name }}"
