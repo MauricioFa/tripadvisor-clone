@@ -9,7 +9,6 @@ export interface ReviewRatingCount {
 }
 
 export interface PhotoSize {
-    medium: PhotoURL;
     large: PhotoURL;
 }
 

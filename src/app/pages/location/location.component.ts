@@ -35,9 +35,6 @@ export class LocationComponent implements OnInit {
   };
   photosReceived: Photo[] = [{
     images: {
-      medium: {
-        url: ''
-      },
       large: {
         url: ''
       },
