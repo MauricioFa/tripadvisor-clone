@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationTitleComponent } from 'src/app/components/location-title/location-title.component';
-import { LocationsService } from 'src/app/services/locations.service';
 import { ActivatedRoute } from '@angular/router';
 import { LocationDetails, Photo } from 'src/app/models/location-details.model';
 import { CommonModule } from "@angular/common";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { LocationImageTilesComponent } from 'src/app/components/location-image-tiles/location-image-tiles.component';
 import { LocationAboutComponent } from 'src/app/components/location-about/location-about.component';
-import { zip } from 'rxjs';
 
 @Component({
   selector: 'app-location',
@@ -44,28 +42,14 @@ export class LocationComponent implements OnInit {
   }]
 
   constructor(
-    private locationsService: LocationsService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.locationId = params.get('id');
-      if (this.locationId) {
-        this.getAllLocationDetails(this.locationId );
-      }
+    this.route.data.subscribe(response => {
+      this.dataReceived = response['locationData'][0];
+      this.photosReceived = response['locationData'][1]?.data || [];
+      this.isDataLoaded = true;
     });
-  }
-  
-  getAllLocationDetails(locationId: string){
-    zip(
-        this.locationsService.getLocation(locationId),
-        this.locationsService.getPhotos(locationId)
-    )
-      .subscribe(response => {
-        this.dataReceived = response[0];
-        this.photosReceived = response[1]?.data || [];
-       this.isDataLoaded = true;
-      });
   }
 }

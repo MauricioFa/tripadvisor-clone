@@ -1,11 +1,11 @@
 <mat-grid-list cols="3" rowHeight="25rem">
   <mat-grid-tile colspan="2" rowspan="2" class="img--fill">
-    <img src="{{ photos[0].images.large.url }}" />
+    <img src="{{ photos[0].images.large.url }}" *ngIf="photos?.[0]" />
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1" class="img--fill"
-    ><img src="{{ photos[1].images.large.url }}"
+    ><img src="{{ photos[1].images.large.url }}" *ngIf="photos?.[1]"
   /></mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1" class="img--fill"
-    ><img src="{{ photos[2].images.large.url }}"
+    ><img src="{{ photos[2].images.large.url }}" *ngIf="photos?.[2]"
   /></mat-grid-tile>
 </mat-grid-list>
