@@ -12,6 +12,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LocationComponent } from './pages/location/location.component';
 import { LocationTitleComponent } from './components/location-title/location-title.component';
 import { LocationImageTilesComponent } from './components/location-image-tiles/location-image-tiles.component';
+import { LocationAboutComponent } from './components/location-about/location-about.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LocationImageTilesComponent } from './components/location-image-tiles/l
     HeaderComponent,
     HomeComponent,
     HttpClientModule,
+    LocationAboutComponent,
     LocationComponent,
     LocationImageTilesComponent,
     LocationTitleComponent,

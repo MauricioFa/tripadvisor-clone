@@ -6,6 +6,7 @@ import { LocationDetails, Photo } from 'src/app/models/location-details.model';
 import { CommonModule } from "@angular/common";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { LocationImageTilesComponent } from 'src/app/components/location-image-tiles/location-image-tiles.component';
+import { LocationAboutComponent } from 'src/app/components/location-about/location-about.component';
 import { zip } from 'rxjs';
 
 @Component({
@@ -15,6 +16,7 @@ import { zip } from 'rxjs';
   standalone: true,
   imports: [
     CommonModule,
+    LocationAboutComponent,
     LocationImageTilesComponent,
     LocationTitleComponent,
     MatProgressBarModule,

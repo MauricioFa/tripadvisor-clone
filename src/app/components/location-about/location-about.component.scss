@@ -1,0 +1,30 @@
+.about-container {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+  &__reviews {
+    display: flex;
+    padding-top: 1rem;
+    &--rating {
+      font-size: 4.8rem;
+    }
+
+    &--count {
+      display: flex;
+      flex-direction: column;
+      p {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+}

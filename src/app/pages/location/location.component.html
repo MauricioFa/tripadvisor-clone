@@ -19,7 +19,14 @@
     ></app-location-image-tiles>
   </div>
   <div class="location--container__about">
-    <div class="about-info"></div>
+    <div class="about-info container--center">
+      <app-location-about
+        num_reviews="{{ dataReceived.num_reviews }}"
+        rating="{{ dataReceived.rating }}"
+        rating_image_url="{{ dataReceived.rating_image_url }}"
+        description="{{ dataReceived.description }}"
+      ></app-location-about>
+    </div>
     <div class="about-amenities"></div>
   </div>
   <div class="location--container__reviews">
