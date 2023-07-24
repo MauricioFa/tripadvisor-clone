@@ -18,4 +18,9 @@ export class LocationsService {
     let apiUrl = encodeURI(`${environment.API_URL}/api/${locationId}/details`)
     return this.http.get<any>(apiUrl)
   }
+
+  getPhotos(locationId: string) {
+    let apiUrl = encodeURI(`${environment.API_URL}/api/${locationId}/photos`)
+    return this.http.get<any>(apiUrl)
+  }
 }

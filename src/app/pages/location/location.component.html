@@ -3,8 +3,8 @@
   class="progress-bar"
   *ngIf="isDataLoaded !== true"
 ></mat-progress-bar>
-<div class="location__container" *ngIf="isDataLoaded">
-  <div class="location__container__title">
+<div class="location--container" *ngIf="isDataLoaded">
+  <div class="location--container__title container--center">
     <app-location-title
       name="{{ dataReceived.name }}"
       src="{{ dataReceived.rating_image_url }}"
@@ -13,12 +13,16 @@
       address="{{ dataReceived.address_obj.address_string }}"
     ></app-location-title>
   </div>
-  <div class="location__container__image-tiles"></div>
-  <div class="location__container__about">
+  <div class="location--container__image-tiles container--center">
+    <app-location-image-tiles
+      [photos]="photosReceived"
+    ></app-location-image-tiles>
+  </div>
+  <div class="location--container__about">
     <div class="about-info"></div>
     <div class="about-amenities"></div>
   </div>
-  <div class="location__container__reviews">
+  <div class="location--container__reviews">
     <div class="review-score"></div>
     <div class="review-detail"></div>
   </div>

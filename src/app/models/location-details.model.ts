@@ -8,6 +8,18 @@ export interface ReviewRatingCount {
     [index: string]: string;
 }
 
+export interface PhotoSize {
+    medium: PhotoURL;
+    large: PhotoURL;
+}
+
+export interface PhotoURL {
+    url: String;
+}
+export interface Photo {
+    images: PhotoSize
+}
+
 export interface LocationDetails {
     address_obj: AddressObj
     amenities?: String[];

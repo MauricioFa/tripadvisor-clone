@@ -4,7 +4,7 @@
     <img src="{{ src }}" />
     <p>{{ rating }} {{ ranking }}</p>
   </div>
-  <p>
+  <p *ngIf="address">
     <mat-icon>pin_drop</mat-icon>
     {{ address }}
   </p>

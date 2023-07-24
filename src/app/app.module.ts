@@ -11,6 +11,7 @@ import { CardComponent } from './components/card/card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LocationComponent } from './pages/location/location.component';
 import { LocationTitleComponent } from './components/location-title/location-title.component';
+import { LocationImageTilesComponent } from './components/location-image-tiles/location-image-tiles.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,16 @@ import { LocationTitleComponent } from './components/location-title/location-tit
     NotFoundComponent,
   ],
   imports: [
-    LocationComponent,
-    LocationTitleComponent,
-    BrowserModule,
-    CardComponent,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    CardComponent,
     HeaderComponent,
     HomeComponent,
     HttpClientModule,
+    LocationComponent,
+    LocationImageTilesComponent,
+    LocationTitleComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
