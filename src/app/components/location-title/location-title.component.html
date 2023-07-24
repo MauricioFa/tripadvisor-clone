@@ -1,13 +1,11 @@
 <div class="title-container">
   <h1>{{ name }}</h1>
   <div class="title-container__reviews">
-    <img
-      src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-66827-5.svg"
-    />
-    <p><span>1920 reviews</span> #<span>1 of 21 hotels in Berkeley</span></p>
+    <img src="{{ src }}" />
+    <p>{{ rating }} {{ ranking }}</p>
   </div>
   <p>
     <mat-icon>pin_drop</mat-icon>
-    086 Allston Way, Berkeley, CA 94704
+    {{ address }}
   </p>
 </div>

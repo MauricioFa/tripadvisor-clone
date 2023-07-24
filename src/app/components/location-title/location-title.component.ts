@@ -10,5 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class LocationTitleComponent {
   @Input() name: string = '';
-
+  @Input() src: string = '';
+  @Input() rating: string = '';
+  @Input() ranking: string = '';
+  @Input() address: string = '';
 }

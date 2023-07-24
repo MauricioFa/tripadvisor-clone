@@ -1,6 +1,12 @@
 <div class="location__container">
   <div class="location__container__title">
-    <app-location-title name="Hotel Shattuck Plaza"></app-location-title>
+    <app-location-title
+      name="{{ dataReceived.name }}"
+      src="{{ dataReceived.rating_image_url }}"
+      rating="{{ dataReceived.rating }}"
+      ranking="{{ dataReceived.ranking_data?.ranking_string }}"
+      address="{{ dataReceived.address_obj.address_string }}"
+    ></app-location-title>
   </div>
   <div class="location__container__image-tiles"></div>
   <div class="location__container__about">

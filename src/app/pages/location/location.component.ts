@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocationTitleComponent } from 'src/app/components/location-title/location-title.component';
+import { LocationsService } from 'src/app/services/locations.service';
+import { ActivatedRoute } from '@angular/router';
+import { LocationDetails } from 'src/app/models/location-details.model';
 
 @Component({
   selector: 'app-location',
@@ -8,6 +11,37 @@ import { LocationTitleComponent } from 'src/app/components/location-title/locati
   standalone: true,
   imports: [LocationTitleComponent],
 })
-export class LocationComponent {
+export class LocationComponent implements OnInit {
+  locationId: string | null = null;
+  dataReceived: LocationDetails = {
+    address_obj: {},
+    amenities: [],
+    description: '',
+    name: '',
+    num_reviews: '',
+    rating: '',
+    review_rating_count: {},
+    rating_image_url: '',
+  };
 
+  constructor(
+    private locationsService: LocationsService,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.locationId = params.get('id');
+      if (this.locationId) {
+        this.getAllLocationDetails(this.locationId );
+      }
+    });
+  }
+  
+  getAllLocationDetails(locationId: string){
+    this.locationsService.getLocation(locationId)
+      .subscribe(data => {
+       this.dataReceived = data;
+      });
+  }
 }

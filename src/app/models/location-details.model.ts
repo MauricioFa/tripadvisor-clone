@@ -14,7 +14,8 @@ export interface LocationDetails {
     description: String;
     name: String;
     num_reviews: String;
-    review_rating_count: ReviewRatingCount,
+    ranking_data?: RankingData;
     rating_image_url: String;
     rating: String;
+    review_rating_count: ReviewRatingCount,
 }
