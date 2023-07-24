@@ -24,6 +24,8 @@ Concepts addressed:
 
 A proxy server was implemented to protect API keys. You can check it here [proxy-server](https://github.com/MauricioFa/proxy-server)
 
+[Go to live application](https://creative-fox-0ee353.netlify.app)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 ## Development server
